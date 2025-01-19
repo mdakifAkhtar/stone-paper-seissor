@@ -74,9 +74,26 @@
             display:inline;
             border-radius:9px ;
             padding:1rem ;
-            box-shadow:5px 5px 9px rgb(99, 224, 236),-5px -5px 9px rgb(54, 213, 235);
+            box-shadow:5px 5px 9px rgb(136, 221, 45),-5px -5px 9px rgb(96, 230, 34);
             text-shadow:5px 5px 9px rgb(158, 41, 41) ;
         }
+              @media (max-width: 768px) {
+    .choices {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .choice {
+        height: 120px;
+        width: 120px;
+    }
+    img {
+        height: 100px;
+        width: 100px;
+    }
+    .score-board {
+        flex-direction: column;
+        gap: 2rem;
+    }
     </style>
 </head>
 <body>
@@ -110,7 +127,7 @@
     </div>
 
     <div class="msg-container">
-        <p id="msg">Play your Move</p>
+    <p id="msg">Hi! Mohammad🧑 Play your Move</p>
     </div>
     <script src="rps.js"></script>
 </body>
