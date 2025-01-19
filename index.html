@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Sesor</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            text-align: center;
+        }
+        h1{
+            background-color:#081b31 ;
+            color:#fff;
+            height:4rem;
+            font-size:49px ;
+            text-shadow:0px 0px 9px cyan,
+                        0px 0px 9px cyan,
+                        0px 0px 9px cyan,
+                        0px 0px 9px cyan;
+
+        }
+        .choices{
+           display: flex; 
+           justify-content: center;
+           align-items: center;
+           gap:3rem ;
+           margin-top:4rem ;
+        }
+        .choice{
+            height:171px;
+            width:171px;
+            border-radius:49% ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .choice:hover{
+            transition:2s ease-in-out;
+            border-radius:25% ;
+            opacity:0.5 ;
+            cursor:pointer ;
+            background-color:#081b31 ;
+            box-shadow:5px 5px 9px rgb(6, 44, 110),-5px -5px 9px rgb(156, 77, 231) ;
+        }
+        img{
+            height: 149px;
+            width: 149px;
+            object-fit:cover ;
+            border-radius:49% ;
+        }
+        .score-board{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            font-size:2rem ;
+            gap:5rem ;
+            margin-top:4rem ;
+            text-shadow:3px 3px 5px rgb(213, 47, 166) ;
+        }
+        #user-score,#comp-score{
+            font-size:3rem ;
+        }
+        .msg-container{
+            margin-top:3rem ;
+        }
+        #msg{
+            background-color:#d15aaf ;
+            color:#fff;
+            font-size:2rem ;
+            line-height:2rem ;
+            margin-top:5rem ;
+            display:inline;
+            border-radius:9px ;
+            padding:1rem ;
+            box-shadow:5px 5px 9px rgb(150, 66, 228),-5px -5px 9px rgb(120, 14, 195);
+            text-shadow:5px 5px 9px rgb(158, 41, 41) ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stone Paper Scissors</h1>
+    <div class="choices">
+        <div class="choice" id="paper">
+            <img src="paper.png">
+        </div>
+        <div class="choice" id="scissors">
+            <img src="scissors.png">
+        </div>
+        <div class="choice" id="stone">
+            <img src="rock.png">
+        </div>
+    </div>
+
+    <div class="score-board">
+        <div class="score">
+            <p id="user-score">0</p>
+            <p>YOU</p>
+        </div>
+
+        <div class="score">
+            <p id="comp-score">0</p>
+            <p>COMPUTER</p>
+        </div>
+    </div>
+
+    <div class="msg-container">
+        <p id="msg">Play your Move</p>
+    </div>
+    <script src="rps.js"></script>
+</body>
+</html>
