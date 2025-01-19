@@ -78,8 +78,20 @@ choices.forEach((choice) => {
         const userChoice = choice.getAttribute("Id");
       console.log("choice was clicked",userChoice);
       playGame(userChoice);
-    })
-})
+    });
+});
+
+
+document.getElementById("reset").addEventListener("click", () => {
+    document.getElementById("user-score").textContent = 0;
+    document.getElementById("comp-score").textContent = 0;
+    document.getElementById("attempt").textContent = 0;
+    msg.textContent = "Hi! Mohammad🧑 Play your Move";
+    msg.style.backgroundColor ="#081b31";
+    userScore=0;
+    compScore=0;
+    attempt=0; 
+});
 
 
 /* const choices = ["stone", "paper", "scissors"];
