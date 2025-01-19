@@ -77,14 +77,27 @@
             box-shadow:5px 5px 9px rgb(136, 221, 45),-5px -5px 9px rgb(96, 230, 34);
             text-shadow:5px 5px 9px rgb(158, 41, 41) ;
         }
+        button{
+            height:49px ;
+            width:119px ;
+            background-color:rgb(243, 197, 71) ;
+            border-radius:13px;
+            margin-top:2rem ;
+            padding:0.5rem ;
+            font-size:1rem ;
+            color:wheat ;
+            text-shadow:0px 0px 9px rgb(205, 94, 235),
+                        0px 0px 9px rgb(151, 251, 251);
+
+        }
               @media (max-width: 768px) {
     .choices {
-        flex-direction: column;
-        gap: 1.5rem;
+        flex-direction:row;
+        gap: 1.3rem;
     }
     .choice {
-        height: 120px;
-        width: 120px;
+        height: 25px;
+        width: 91px;
     }
     img {
         height: 100px;
@@ -94,6 +107,13 @@
         flex-direction: column;
         gap: 2rem;
     }
+     #msg{
+        flex-direction:row;
+        font-size:1.5rem ;
+        padding:0.5rem ;
+        max-width: max-content;
+    }             
+ }
     </style>
 </head>
 <body>
@@ -129,6 +149,7 @@
     <div class="msg-container">
     <p id="msg">Hi! Mohammad🧑 Play your Move</p>
     </div>
+    <button id="reset">Rest Game</button>
     <script src="rps.js"></script>
 </body>
 </html>
