@@ -1,10 +1,12 @@
 let userScore=0;
 let compScore=0;
+let attempt=0;
 
 const choices=document.querySelectorAll(".choice");
 const msg=document.querySelector("#msg");
 const userScorepara=document.querySelector("#user-score");
 const compscorepara=document.querySelector("#comp-score");
+const attemptt=document.querySelector("#attempt");
 
 const genCompchoice = () => {
     const option =["stone","paper","scissors"];
@@ -40,6 +42,8 @@ const showWinner = (userWinn,userChoice,compChoice) =>{
 
 
 const playGame=(userChoice) => {
+    attempt++;
+    attemptt.innerText=attempt;
    // console.log("user choice =",userChoice);
     //generate computer choice;
     const compChoice =genCompchoice() ;
