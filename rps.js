@@ -81,3 +81,45 @@ choices.forEach((choice) => {
     })
 })
 
+
+/* const choices = ["stone", "paper", "scissors"];
+const userScore = document.getElementById("user-score");
+const compScore = document.getElementById("comp-score");
+const attempt = document.getElementById("attempt");
+const msg = document.getElementById("msg");
+
+document.querySelectorAll(".choice").forEach(choice => {
+    choice.addEventListener("click", () => {
+        const userChoice = choice.id;
+        const compChoice = choices[Math.floor(Math.random() * 3)];
+        playRound(userChoice, compChoice);
+    });
+});
+
+function playRound(user, comp) {
+    attempt.textContent = parseInt(attempt.textContent) + 1;
+
+    if (user === comp) {
+        msg.textContent = `It's a tie! Both chose ${user}.`;
+    } else if (
+        (userChoice === "stone" && compChoice === "scissors") ||
+        (userChoice === "paper" && compChoice === "stone") ||
+        (userchoice === "scissors" && compChoice === "paper")
+    ) {
+        msg.textContent = `You win! ${user} beats ${comp}.`;
+        userScore.textContent = parseInt(userScore.textContent) + 1;
+    } else {
+        msg.textContent = `You lose! ${comp} beats ${user}.`;
+        compScore.textContent = parseInt(compScore.textContent) + 1;
+    }
+}
+*/ 
+
+
+
+
+
+
+
+
+
