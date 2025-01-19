@@ -24,19 +24,19 @@ const drawGame = () => {
 
 const showWinner = (userWinn,userChoice,compChoice) =>{
     if(userWinn){
-        msg.style.transition="0.8s ease-in-out";
         userScore++;
         userScorepara.innerText=userScore;
         //console.log("you win!");
         //msg.style.transition="0.8s ease-in-out";
         msg.innerText = `You win🤘. ${userChoice} beats computer ${compChoice}`;
-        msg.style.backgroundColor ="green";
+        msg.style.backgroundColor ="rgb(17, 231, 17) ";
+
     }else {
         //console.log("you lose");
         compScore++;
         compscorepara.innerText=compScore;
         msg.innerText = `You lost👊. ${compChoice} beats your ${userChoice}`;
-        msg.style.backgroundColor ="red";
+        msg.style.backgroundColor ="rgb(186, 44, 44";
     }
 };
 
