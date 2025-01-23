@@ -15,6 +15,8 @@
             color:#fff;
             height:4rem;
             font-size:49px ;
+            
+
         }
         .choices{
            display: flex; 
@@ -30,13 +32,32 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            animation:round 5s linear infinite ;
+            transform: rotate(360dg);
+        }
+        @keyframes round{
+            0%{
+                border:5px solid rgb(246, 120, 120);
+            }   
+            25%{
+                border:5px solid rgb(42, 181, 123); 
+            } 
+            49%{
+                border:5px solid rgb(183, 132, 238); 
+            }
+            49%{
+                border:5px solid rgb(111, 248, 111); 
+            }
+            100%{
+                border:5px solid rgb(230, 19, 188);
+            }
         }
         .choice:hover{
             transition:0.9s ease-in-out;
             border-radius:25% ;
             opacity:0.5 ;
             cursor:pointer ;
-            background-color:#081b31 ;
+            background:linear-gradient(to right rgb(218, 6, 6),rgb(183, 23, 183),rgb(232, 174, 66),rgb(174, 94, 231));
             box-shadow:5px 5px 9px rgb(6, 44, 110),-5px -5px 9px rgb(156, 77, 231) ;
         }
         img{
@@ -50,15 +71,14 @@
             align-items: center;
             justify-content: center;
             font-size:2rem ;
+            color: aliceblue;
             gap:5rem ;
             margin-top:4rem ;
-            color: aliceblue;
             text-shadow:0px 0px 9px rgb(70, 238, 238),
                         0px 0px 9px rgb(30, 209, 209),
                         0px 0px 9px rgb(21, 236, 236),
                         0px 0px 9px rgb(151, 251, 251);
         }
-        
         #user-score,#comp-score,#attempt{
             font-size:3rem ;
         }
@@ -74,13 +94,27 @@
             display:inline;
             border-radius:9px ;
             padding:1rem ;
-            box-shadow:5px 5px 9px rgb(136, 221, 45),-5px -5px 9px rgb(96, 230, 34);
             text-shadow:5px 5px 9px rgb(158, 41, 41) ;
+            animation:msganimation 5s linear infinite ;
+
+        }
+        @keyframes msganimation{
+            0%{
+            box-shadow:5px 5px 9px rgb(244, 166, 207),-5px -5px 9px rgb(96, 230, 34);
+
+            }
+            50%{
+            box-shadow:5px 5px 9px rgb(214, 80, 192),-5px -5px 9px rgb(80, 60, 234);
+            }
+            100%{
+            box-shadow:5px 5px 9px rgb(216, 160, 28),-5px -5px 9px rgb(8, 64, 102);
+
+            }
         }
         button{
             height:49px ;
             width:119px ;
-            background-color:rgb(243, 197, 71) ;
+            background:linear-gradient(to right,#ff7e5f,#feb47b,rgb(188, 215, 54)) ;
             border-radius:13px;
             margin-top:2rem ;
             padding:0.5rem ;
@@ -88,22 +122,19 @@
             color:wheat ;
             text-shadow:0px 0px 9px rgb(205, 94, 235),
                         0px 0px 9px rgb(151, 251, 251);
-
+            border:2px solid rebeccapurple ;
         }
         button:active{
-            background-color:yellowgreen ;
-            border:2px groove rgb(193, 10, 110) ;
-
+            background:linear-gradient(to right,#e13e16,#8c1fd0,rgb(23, 230, 219)) ;
         }
-        
-              @media (max-width: 1080px) {
+        @media (max-width:1080px) {
     .choices {
         flex-direction:row;
         gap: 1.3rem;
     }
     .choice {
         height: 109px;
-        width: 113px;
+        width: 109px;
     }
     img {
         height: 100px;
@@ -113,13 +144,13 @@
         flex-direction: column;
         gap: 2rem;
     }
-     #msg{
+    #msg{
         flex-direction:row;
         font-size:1.5rem ;
         padding:0.5rem ;
         max-width: max-content;
-    }             
- }
+}
+}
     </style>
 </head>
 <body>
@@ -153,9 +184,10 @@
     </div>
 
     <div class="msg-container">
-    <p id="msg">Hi! Mohammad🧑 Play your Move</p>
+        <p id="msg">Hi! Mohammad🧑 Play your Move</p>
     </div>
     <button id="reset">Rest Game</button>
+
     <script src="rps.js"></script>
 </body>
 </html>
