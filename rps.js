@@ -72,6 +72,7 @@ const playGame=(userChoice) => {
 };
 
 
+
 choices.forEach((choice) => {
     //console.log(choice);
     choice.addEventListener("click",() => {
@@ -91,6 +92,13 @@ document.getElementById("reset").addEventListener("click", () => {
     userScore=0;
     compScore=0;
     attempt=0; 
+});
+
+choices.forEach((choice) => {
+    choice.addEventListener('click', () => {
+        animat.style.transition = 'transform 0.9s'; // Smooth animation
+        animat.style.transform = 'rotateX(360deg)'; // Rotate 180 degrees
+    });
 });
 
 
