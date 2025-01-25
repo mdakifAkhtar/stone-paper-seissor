@@ -96,8 +96,20 @@
             padding:1rem ;
             text-shadow:5px 5px 9px rgb(158, 41, 41) ;
             animation:msganimation 5s linear infinite ;
-
+        } 
+          .msg-container:hover{
+            transform-style:preserve-3d;
+            transition: transform 0.6s; /* Smooth flipping animation */   
+            animation:flip360 1s linear ; 
         }
+        @keyframes flip360 {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(180deg);
+    }
+}
         @keyframes msganimation{
             0%{
             box-shadow:5px 5px 9px rgb(244, 166, 207),-5px -5px 9px rgb(96, 230, 34);
